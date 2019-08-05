@@ -1,0 +1,285 @@
+
+
+jQuery是一个javascript函数库
+jQuery是一个轻量级的"写的少，做的多"的javascript库
+
+jQuery库包含以下功能：
+1.HTML元素选取
+2.HTML元素操作
+3.CSS操作
+4.HTML事件函数
+5.JavaScript特效和动画
+
+jquery安装
+
+
+jquery语法
+
+通过jquery，可以选取(查询，query) html元素，并对他们执行"操作"(actions)
+
+
+基础语法： $(selector).action()
+
+美元符号定义jquery
+选择符(selector) "查询"和"查找"html 元素
+jquery 的action()执行对元素的操作
+
+$(this).hide() 隐藏当前元素
+$("p").hide 隐藏所有<p>元素
+$("p.test").hide()  隐藏所有 class="test"的<p>元素
+$("#test").hide()  隐藏所有id="test"的元素
+
+
+文档就绪时间
+
+document ready函数
+
+
+这是为了防止文档完全加载之前运行jquery代码，即在DOM加载完成后才可以对DOM进行操作
+如果在文档没有完全加载之前就运行函数，操作可能是吧
+两个例子：
+1.试图隐藏一个不存在的元素
+2.获得未完全加载的图像的大小
+
+$(function()){};
+
+jquery选择器  允许对html元素组或单个元素进行操作
+
+jquery语法基于元素的id,类，类型，属性，属性值等"查找"（或选择）html元素，并对他们执行t
+它基于已经存在的css选择器，
+jquery中所有选择器都以美元符号开头: $()
+
+元素选择器
+
+jquery元素选择器基于元素名选取元素
+在页面中选取所有<p>元素  $("p")
+
+
+#id选择器
+
+jquery #id选择器通过HTML元素的id属性选取指定的元素
+页面中元素的id应该是唯一的，要在页面中选取唯一的元素通过#id选择器ont
+
+通过id选取元素
+$("#test")
+
+
+.class选择器
+jquery类选择器可以通过指定的class查找元素
+
+$(".test")
+
+用户点击按钮后所有带有class="test"属性的元素都隐藏
+
+
+jquery 事件  jquery是为事件处理特别设计的
+
+什么是事件？
+页面对不同访问者的响应叫做事件
+事件处理程序指的是当HTML中发生某些事件时所调用的方法
+1.在元素上移动鼠标
+2.选取单选按钮
+3. 点击元素
+
+在事件中经常使用触发
+鼠标事件
+
+click  dbclick mouseenter  moubsleave  hover
+
+键盘事件
+
+keypress  keydown  keyup
+
+
+表单事件 
+submit  change  focus  blur
+
+
+文档/窗口事件
+
+load  resize scroll unload
+
+jquery事件方法语法
+
+在jquery中，大多数DOM事件都有一个等效的jquery方法
+
+页面中指定一个点击事件
+
+$("p").click()
+
+下一步是定义什么时间触发事件。可以通过一个事件函数实现
+
+$('p').click(function){//};
+
+常用的jquery事件方法
+$(document).ready()方法允许我们在文档完全加载完执行函数。
+click() 方法是按钮点击事件被触发时会调用一个函数
+
+该函数在用户点击HTML元素时执行
+dblclick() 当双击元素时，会发生dblclick()事件
+mouseenter（） 当鼠标指针穿过元素时，会发生mouseenter事件
+mouseleave() 当鼠标指针离开元素，时
+mousedown
+jquery效果- 隐藏和消失
+hide() 和 show()
+
+$("#hide").click(function()){
+	$("p").hide();
+	};
+	
+jquery 效果 -淡入淡出
+fadeln, fadeout,fadetoggle,fadetoggle
+
+效果-滑动
+slideDown, slideup, slidetoggle
+
+
+jquery动画   animate()方法允许我们在文档完全加载完执行函数。
+
+animate() 操作多个属性，使用相对值，使用预定值，使用队列功能
+
+停止动画 stop
+Callback函数在当前动画100%完成之后执行
+
+
+通过 链(Chaining)
+
+通过jquery,可以把动作、方法链接在一起
+
+chainning允许我们在一条语句上运行多个query方法(在相同的元素上)
+
+jquery方法链接
+
+jquery会抛掉多余的空格，并当成一行长代码来执行
+
+jquery dom操作 获取内容共和属性
+
+
+jquery拥有可操作html元素和属性的强大方法
+
+dom 文档对象模型，文档对象模型独立于平台和语言的界面，允许程序和脚本
+动态访问和更新文档的内容，结构以及央视
+
+
+获得内容  ——text(),html(),val()
+
+用于DOM操作的jquery方法
+
+text() 设置或返回所选元素的文本内容
+html() 设置或返回所选元素的内容(包括HTML标记)
+val() 设置或返回表单字段的值
+
+获取属性 -attr() 该方法用户获取属性值
+
+
+添加元素
+
+append 在被选元素的结尾插入内容
+prepend 在被选元素的开头插入内容
+after 在被选元素之后插入内容
+before 在被选元素之前插入内容
+
+
+删除元素
+
+remove 删除被选元素（及其子元素）
+empty 从被选元素中删除子元素
+
+remove也可以接受一个参数，允许对被删元素进行过滤
+
+
+jquery 获取并设置css类  操作
+
+addClass 向被选元素添加一个或多个类
+removeClass 从被选元素删除一个或多个累
+toggleClass 对被选元素进行添加，删除类的切换操作
+css 设置或返回样式属性
+
+css方法设置或返回被选元素的一个或多个样式属性
+
+jquery提供多个处理尺寸的方法
+
+
+width,heiht,innerwidth,innerHeight,outerwidth,outerwidth
+
+jquery 遍历，就是移动。用于根据其相对于其他元素的关系来"查找"（或选取）HTML元素。
+以某项选择开始，并沿着这个选择移动，
+
+
+jquery提供了多种遍历DOM的方法，遍历方法中最大的种类是树遍历(tree-traversal)
+
+
+祖先
+
+parent,parents,parentsUnitl
+
+后代
+
+children,find
+
+
+children 方法返回被选元素的所有直接子元素，该方法只会向下一级DOM树进行遍历
+也可以使用可选参数来过滤对子元素的搜索
+find方法返回被选元素的后代元素，一路向下直到最后一个后代
+
+同胞(siblings) 同胞拥有相同的父元素
+
+在DOM树中水平遍历
+
+siblings(),next(),nextAll(),nextUntil(),prev(),prevAll(),prevUntil()
+
+siblings() 方法返回被选元素的所有同胞元素
+也可以使用可选参数来过滤对同胞元素的搜索
+
+
+next() 方法返回被选元素的下一个同胞元素，该方法只返回一个元素
+
+nextAll() 方法返回被选元素的所有跟随的同胞元素
+
+nextUntil() 方法返回介于li9angge给定参数之间的所有紧跟的同胞元素
+
+遍历-过滤
+
+
+缩小搜索元素的范围
+
+first(),last(),eq()  它们允许基于其在一组元素中的位置来选择一个特定的元素。filter(),not()
+允许选取匹配或不匹配某些指定标准的元素
+
+first() 方法返回被选元素的首个元素
+last() 方法返回被选元素的最后一个元素
+eq() 方法返回被选元素中带有指定索引号的元素。索引号从0开始，
+filter() 方法允许规定一个标准。不匹配的这个标准的元素会从集合中删除，匹配的元素会被返回
+
+not()方法返回不匹配标准的所有元素
+
+ajax是服务器交换数据的技术，它在不重载全部页面的情况下，实现了对部分网页的更新
+
+
+ajax = 异步js + XML
+
+load 方法从服务器加载数据，并把返回的数据放入被选元素中
+
+$(selector).load(URL,data,callback)
+
+必需的 URL 参数规定加载的url
+可选的 data 参数规定与请求一同发送的查询字符串键值对集合
+可选的 callback 参数是load()方法完成后缩执行的函数名称
+
+可选的callback参数规定当load()方法完成后所要允许的回调函数。
+
+get() 从制定的资源请求数据
+post() 向指定的资源提交要处理的数据
+
+get基本上用于从服务器获得(取回)数据。 get方法可能返回缓存数据
+post也可用于服务器获取数据。post不会缓存数据，并且常用于连同请求一起发送数据
+
+noConflict()方法从服务器加载数据，并把返回的数据放入被选元素中
+
+noConflict()方法会释放对$标识符的控制
+
+
+jquery的一些插件
+
+Validate  Cookie,Accordition  ,Autocomplete, C
+

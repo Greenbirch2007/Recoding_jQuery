@@ -1,0 +1,46 @@
+
+jQuery UI 是建立在jquery 库上的一组用户界面交互，特效，小部件及主题。
+无论是创建高度交互的web应用程序还是仅仅向窗体空间添加一个日期选择器，
+
+
+jQuery UI包含了许多维持状态的小部件
+
+jQuery UI 
+
+创建自定义jQuery UI下载
+
+1.选择需要的组件
+
+
+核心(UI Core)
+交互部件(Interactiones)
+小部件(Widgets)
+效果图(Effects)
+
+2.选择一个主题或自定义一个主题
+
+3. 选择jQuery UI的版本
+
+
+jQuery UI使用
+
+
+jquery-ui.custom.css
+
+
+jQuery UI 基础：使用选项
+
+视觉定制:设计一个jQuery UI 主题 
+
+jQuery UI 工作原理
+
+$("#elem").progressbar{{ value:20}};
+
+公共的方法
+
+每个小部件都有机遇自己的方法
+
+
+
+jQuery UI 主题
+
